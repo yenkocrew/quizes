@@ -13,6 +13,7 @@ TODO
 
 // Write a function called shorten that accepts a single string.  
 // The function should remove all the spaces in the string and return the new string.
+// Don't spend too much time on this problem if you get stuck.
 TODO
 
 // write a function called greeter that does not take arguments.  
@@ -31,7 +32,7 @@ describe('add', function() {
     it("should do addition", function() {
     	assert.equal(add(1, 1), 2);
     	assert.equal(add(2, 5), 7);
-    })
+    });
 });
 
 describe('concatenateStrings', function() {
@@ -39,10 +40,10 @@ describe('concatenateStrings', function() {
         assert.equal(typeof(concatenateStrings), 'function');
     });
 
-    it("should do addition", function() {
-    	assert.equal(add(1, 1), 2);
-    	assert.equal(add(2, 5), 7);
-    })
+    it("should combine strings", function() {
+    	assert.equal(concatenateStrings('foo', 'bar'), 'foobar');
+    	assert.equal(concatenateStrings('should not', 'add spaces'), 'should notadd spaces');
+    });
 });
 
 describe('shorten', function() {
@@ -50,11 +51,14 @@ describe('shorten', function() {
         assert.equal(typeof(shorten), 'function');
     });
 
-    it("should remove spaces", function() {
-    	assert.equal(shorten('I am a sentence with six spaces'), 'Iamasentencewithsixspaces');
-    })
-});
+    it("should remove a single space", function() {
+    	assert.equal(shorten('no space'), 'nospace');
+    });
 
+    it("should remove multiple spaces", function() {
+    	assert.equal(shorten('I am a sentence with six spaces'), 'Iamasentencewithsixspaces');
+    });
+});
 
 describe('greeter', function() {
 	it("Should be a function", function() {
