@@ -1,0 +1,73 @@
+require("inline-mocha")(module);
+const assert = require('assert');
+const mockCl = require('./mockCl.js');
+const TODO = 'TODO';
+
+// DIRECTIONS: complete the prompts below, replacing TODO with your solution to each prompt:
+
+// Write a function called add which accepts two numbers as arguments and returns their sum.
+TODO
+
+// Write a function called concatenateStrings which accepts two strings, joins them together, and returns the joined string.
+TODO
+
+// Write a function called shorten that accepts a single string.  
+// The function should remove all the spaces in the string and return the new string.
+TODO
+
+// write a function called greeter that does not take arguments.  
+// The function should use console.log to print 'hello'.
+TODO
+
+
+// The following tests should pass when you have successfully completed the above prompts:
+// There is no need to modify these tests.
+
+describe('add', function() {
+    it("Should be a function", function() {
+        assert.equal(typeof(add), 'function');
+    });
+
+    it("should do addition", function() {
+    	assert.equal(add(1, 1), 2);
+    	assert.equal(add(2, 5), 7);
+    })
+});
+
+describe('concatenateStrings', function() {
+    it("Should be a function", function() {
+        assert.equal(typeof(concatenateStrings), 'function');
+    });
+
+    it("should do addition", function() {
+    	assert.equal(add(1, 1), 2);
+    	assert.equal(add(2, 5), 7);
+    })
+});
+
+describe('shorten', function() {
+    it("Should be a function", function() {
+        assert.equal(typeof(shorten), 'function');
+    });
+
+    it("should remove spaces", function() {
+    	assert.equal(shorten('I am a sentence with six spaces'), 'Iamasentencewithsixspaces');
+    })
+});
+
+
+describe('greeter', function() {
+	it("Should be a function", function() {
+        assert.equal(typeof(greeter), 'function');
+    });
+
+	it("should say hello", function() {
+		mockCl.start({passThrough: false});
+		try {
+			greeter();
+		} finally {
+			mockCl.stop();
+		}
+		assert(mockCl.stack.includes('hello'));
+	});
+});
