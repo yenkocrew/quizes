@@ -77,7 +77,7 @@ describe('Part 1', function() {
 
 describe('Part 2', function() {
     it('should update kyleStatus', function() {
-        assert.equal(kyleStatus, 'Kyle ate a bagel');
+        assert.equal(kyleStatus, 'Kyle ate a bagel.');
     });
     it('should log the updated status', function() {
         assert(mockCl.stack.includes('Kyle ate a bagel.'));
