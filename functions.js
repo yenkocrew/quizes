@@ -8,7 +8,7 @@ const TODO = 'TODO';
 // You do not need to fix the tests.
 
 // Part 1
-mockCl.start();
+mockCl.start(); // IGNORE ME
 // Assign the string ‘Good morning' to a variable named `greeting`.
 TODO
 
@@ -16,7 +16,6 @@ TODO
 TODO
 
 
-mockCl.stop();
 // ============================================================================
 // Part 2
 
@@ -28,6 +27,7 @@ TODO
 // Print your status using console.log.
 TODO
 
+mockCl.stop();  // IGNORE ME
 // ============================================================================
 // Part 3
 
